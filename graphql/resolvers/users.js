@@ -45,8 +45,8 @@ module.exports = {
       const match = await bcrypt.compare(password, user.password)
 
       if (!match) {
-        errors.general = 'Wrong crendetials'
-        throw new UserInputError('Wrong crendetials', { errors })
+        errors.general = 'Wrong password'
+        throw new UserInputError('Wrong password', { errors })
       }
 
       // if we get to this point in the code, the email and password are correct, and the user can be logged in
